@@ -23,9 +23,17 @@ Guides presenting ideas in simple and plain language, focused on concerns, conse
 # Install both skills globally to Pi
 npx skills add WeZZard/secretary -g -a pi --skill documentation --skill presentation
 
-# Or install globally with symlink mode (default). Verify with:
+# Verify with:
 npx skills list -g
+
+# Update after a change in this repo:
+npx skills update documentation presentation
 ```
+
+> Note: `npx skills` installs to Pi via **copy** mode because only one agent is
+targeted (the canonical+symlink model applies to multi-agent installs). The
+installed skills are still fully managed by `npx skills` and tracked in
+`~/.agents/.skill-lock.json`.
 
 ## Package Structure
 
