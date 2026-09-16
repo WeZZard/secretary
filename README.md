@@ -17,6 +17,12 @@ Present any contents in the conversation other than small talks. Use when explai
 
 Guides presenting ideas in simple and plain language, focused on concerns, consequences, and recommended actions.
 
+### consult-user
+
+Consult user on something.
+
+Presents your concerns, the consequences, and the recommended actions when a decision needs user input.
+
 ## Installation
 
 ```bash
@@ -41,6 +47,8 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 
 ```
 skills/
+├── consult-user/
+│   └── SKILL.md
 ├── documentation/
 │   └── SKILL.md
 └── presentation/
