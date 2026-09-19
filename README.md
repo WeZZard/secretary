@@ -23,17 +23,23 @@ Consult user on something.
 
 Presents your concerns, the consequences, and the recommended actions when a decision needs user input.
 
+### troubleshoot
+
+Troubleshoot a reported issue end to end. Use when a bug or defect is reported and needs reproduction, root cause analysis, an architectural fix, and a documented plan.
+
+Drives troubleshooting with an end-to-end reproducer, lands an architectural fix with updated documents, and records a plan in the `.plans` directory citing the document changes.
+
 ## Installation
 
 ```bash
-# Install both skills globally to Pi
-npx skills add WeZZard/secretary -g -a pi --skill documentation --skill presentation
+# Install the skills globally to Pi
+npx skills add WeZZard/secretary -g -a pi --skill documentation --skill presentation --skill consult-user --skill troubleshoot
 
 # Verify with:
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update documentation presentation
+npx skills update documentation presentation consult-user troubleshoot
 ```
 
 > Note: `npx skills` installs to Pi via **copy** mode because only one agent is
@@ -51,7 +57,9 @@ skills/
 │   └── SKILL.md
 ├── documentation/
 │   └── SKILL.md
-└── presentation/
+├── presentation/
+│   └── SKILL.md
+└── troubleshoot/
     └── SKILL.md
 ```
 
