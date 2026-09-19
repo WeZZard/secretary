@@ -29,17 +29,23 @@ Troubleshoot a reported issue end to end. Use when a bug or defect is reported a
 
 Drives troubleshooting with an end-to-end reproducer, lands an architectural fix with updated documents, and records a plan in the `.plans` directory citing the document changes.
 
+### visual-design
+
+Create a distinctive visual direction using a random string as private inspiration. Use when designing interfaces, websites, graphics, or other visual artifacts, or refining their color scheme, layout, and typography.
+
+Guides design through shell-generated randomness, interpretation of inspiring patterns, and polished execution without revealing the string in the result.
+
 ## Installation
 
 ```bash
 # Install the skills globally to Pi
-npx skills add WeZZard/secretary -g -a pi --skill documentation --skill presentation --skill consult-user --skill troubleshoot
+npx skills add WeZZard/secretary -g -a pi --skill documentation --skill presentation --skill consult-user --skill troubleshoot --skill visual-design
 
 # Verify with:
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update documentation presentation consult-user troubleshoot
+npx skills update documentation presentation consult-user troubleshoot visual-design
 ```
 
 > Note: `npx skills` installs to Pi via **copy** mode because only one agent is
@@ -59,7 +65,9 @@ skills/
 │   └── SKILL.md
 ├── presentation/
 │   └── SKILL.md
-└── troubleshoot/
+├── troubleshoot/
+│   └── SKILL.md
+└── visual-design/
     └── SKILL.md
 ```
 
