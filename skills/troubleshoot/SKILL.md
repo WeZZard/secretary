@@ -10,9 +10,10 @@ Drive the troubleshooting process with a reproducer, not with speculation.
 ## Process
 
 1. **Build an end-to-end reproducer of the reported issue.**
+   - Read the user message as an issue report.
    - Reproduce the issue exactly as reported before touching any code.
-   - The reproducer must run end to end against the real system boundaries that the report describes, not against mocks of the component under suspicion.
-   - The reproducer must fail deterministically before the fix and pass deterministically after the fix. Keep it as a regression test.
+   - The reproducer **MUST** run end to end against the real system boundaries that the report describes, not against mocks of the component under suspicion.
+   - The reproducer **MUST** fail deterministically before the fix and pass deterministically after the fix. Keep it as a regression test.
 
 2. **Drive the troubleshooting process with the reproducer.**
    - Form a hypothesis, change one variable, and rerun the reproducer.
@@ -28,3 +29,4 @@ Drive the troubleshooting process with a reproducer, not with speculation.
    - Write the plan as a file under the project's `.plans/` directory.
    - Each plan item that changes behavior **MUST** cite the document sections it makes true.
    - The plan must state how the reproducer verifies the fix.
+
