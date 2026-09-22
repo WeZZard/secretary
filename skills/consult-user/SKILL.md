@@ -5,4 +5,4 @@ description: Consult user on something.
 
 # Consult
 
-Consult with your concerns, the consequence and the recommended actions.
+Use `/presentation` skill to consult the user with your concerns, the consequence and the recommended actions.

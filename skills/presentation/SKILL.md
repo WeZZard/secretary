@@ -10,3 +10,5 @@ Focus on your concerns, consequence and recommended actions.
 You **MUST** use industry standard and established terminologies in the relevant fields.
 You **MUST NOT** invent termonologies on the fly.
 You **MUST NOT** write condensed sentences. Instead, write bullet points with each item is complete sentence.
+You **MUST** communicate with human readable short name along with identifiers like: `short name (ID-1)`.
+You **MUST** explain those identifiers in appendix if the details of them are not recently mentioned.
