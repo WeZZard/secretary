@@ -1,6 +1,6 @@
 ---
 name: documentation
-description: Write documents. Use when producing, editing, or reviewing any document, doc comment, README, or written deliverable.
+description: Use when producing, editing, or reviewing any document, doc comment, README, or written deliverable.
 ---
 
 # Documentation

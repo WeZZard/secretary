@@ -1,6 +1,6 @@
 ---
 name: consult-user
-description: Consult user on something.
+description: Use when consulting user on something.
 ---
 
 # Consult

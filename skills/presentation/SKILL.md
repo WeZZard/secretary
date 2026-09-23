@@ -1,6 +1,6 @@
 ---
 name: presentation
-description: Present any contents in the conversation other than small talks. Use when explaining a decision, plan, or result so the user can act on it.
+description: Use when explaining a decision, plan, or result so the user can act on it.
 ---
 
 # Presentation
