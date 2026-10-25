@@ -5,7 +5,7 @@ description: "Use when present complex questions or work progress to the user."
 
 # Consult
 
-Use the `/communicate` skill to communicate the user. Focus on your concerns, the consequence and the recommended actions.
+Use the `/communicate` skill to communicate the user. Show your concerns, the consequence and the recommended actions but not limit to these.
 
 **MUST:**
 
