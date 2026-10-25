@@ -1,6 +1,7 @@
 ---
 name: visual-design
-description: Create a distinctive visual direction using a random string as private inspiration. Use when designing interfaces, websites, graphics, or other visual artifacts, or refining their color scheme, layout, and typography.
+description: "Create a distinctive visual direction using a random string as private inspiration. Use when designing interfaces, websites, graphics, or other visual artifacts, or refining their color scheme, layout, and typography."
+disable-model-invocation: true
 ---
 
 # Visual Design

@@ -1,6 +1,7 @@
 ---
 name: troubleshoot
-description: Troubleshoot a reported issue end to end. Use when a bug or defect is reported and needs reproduction, root cause analysis, an architectural fix, and a documented plan.
+description: "Troubleshoot a reported issue end to end. Use when a bug or defect is reported and needs reproduction, root cause analysis, an architectural fix, and a documented plan."
+disable-model-invocation: true
 ---
 
 # Troubleshoot
@@ -29,4 +30,3 @@ Drive the troubleshooting process with a reproducer, not with speculation.
    - Write the plan as a file under the project's `.plans/` directory.
    - Each plan item that changes behavior **MUST** cite the document sections it makes true.
    - The plan must state how the reproducer verifies the fix.
-

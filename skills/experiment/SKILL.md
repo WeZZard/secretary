@@ -4,17 +4,11 @@ description: "Use when settling a question only trying can answer."
 disable-model-invocation: true
 ---
 
-# Experiment — Settle by Evidence
+# Experiment
 
-**Announce at start:** "I'm running an experiment to settle this by evidence."
+## Goal
 
-## When
-
-A question only new experience can answer — nothing recorded holds it yet: "does the shorter opening actually read better?", "does this voice survive the blog medium?". If it is a judgment, the user rules directly — explore's Ask step puts the judgment to them prepared; run the experiment when they want that ruling informed by blind evidence. If the web already holds the answer, research settles it — no experiment. An experiment runs only after research comes back empty.
-
-## External producers
-
-When the dispatch plugin is installed, its `use-external-agents` skill reaches external agents in the producer and judge roles — invoke that skill before composing any router brief; it defines the router and the router brief contract. Without the dispatch plugin, you produce and judge yourself, and the protocol below says how at each step.
+Conduct experiments to answer questions with the protocol and the verdict contract.
 
 ## Protocol
 
@@ -25,7 +19,7 @@ When the dispatch plugin is installed, its `use-external-agents` skill reaches e
 5. **Rule.** Present a compiled comparison to the user: each candidate's path, the rankings across judges, and each verdict's file path so the user can check the reasoning — never quote a verdict partially in a way that reshapes it. The user rules. Reveal the allocation key only after the ruling.
 6. **Conclude.** Report the ruling as the experiment's outcome to the task that requested it. Leave the experiment directory in place — candidates, the allocation key, and verdicts are the experiment's evidence trail; never reuse them as design artifacts.
 
-## The verdict contract
+## The Verdict Contract
 
 **MUST:**
 
@@ -50,4 +44,10 @@ Required verdict template:
 
 ## Isolation
 
-Producers and judges run read-only. When a future experiment requires writing into a repository, work in a detached git worktree, never the repository itself: `git -C <repo-dir> worktree add --detach <worktree-path>` creates it, the diff collected there is the evidence, merging stays an explicit step in the main agent, and `git -C <repo-dir> worktree remove <worktree-path>` cleans up. With the dispatch plugin installed, its `use-external-agents` skill carries the worktree tooling and the write-isolation rules for external agents.
+- Producers and judges **MUST** run read-only.
+- The experiment **MUST** run in a detached git worktree when the experiment requires writing into a repository. The diff collected there is the evidence. Merging stays an explicit step in the main agent
+
+<GIT_WORKTREE_COMMAND_EXAMPLES>
+Create: `git -C <repo-dir> worktree add --detach <worktree-path>`.
+Cleans up: `git -C <repo-dir> worktree remove <worktree-path>`.
+</GIT_WORKTREE_COMMAND_EXAMPLES>
