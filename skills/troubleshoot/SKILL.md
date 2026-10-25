@@ -1,12 +1,11 @@
 ---
 name: troubleshoot
-description: "Troubleshoot a reported issue end to end. Use when a bug or defect is reported and needs reproduction, root cause analysis, an architectural fix, and a documented plan."
-disable-model-invocation: true
+description: "Use when a bug or defect is reported."
 ---
 
 # Troubleshoot
 
-Drive the troubleshooting process with a reproducer, not with speculation.
+Drive an end-to-end troubleshooting process with the reproduction, the root cause analysis and the architectural fix plan.
 
 ## Process
 

@@ -1,7 +1,6 @@
 ---
 name: explore
 description: "Use when starting a design discussion."
-disable-model-invocation: true
 ---
 
 # Explore

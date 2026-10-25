@@ -1,7 +1,6 @@
 ---
 name: documentation
 description: "Use when producing, editing, or reviewing any document, doc comment, README, or written deliverable."
-disable-model-invocation: true
 ---
 
 # Documentation
