@@ -5,37 +5,63 @@ package installable via [npx skills](https://github.com/vercel-labs/skills).
 
 ## Skills
 
-### documentation
+### Model-Invoked Skills
+
+The agent loads these skills on its own when the task matches the description.
+
+#### documentation
 
 Write documents. Use when producing, editing, or reviewing any document, doc comment, README, or written deliverable.
 
-Guides document authoring to industry-standard format in simple and plain language.
+Guides document authoring to industry-standard format in simple and plain language, with Mermaid diagrams where they improve comprehension and consistent terminology through `communication-consistency`.
 
-### presentation
+#### explore
 
-Present any contents in the conversation other than small talks. Use when explaining a decision, plan, or result so the user can act on it.
+Explore requirements. Use when starting a design discussion.
 
-Guides presenting ideas in simple and plain language, focused on concerns, consequences, and recommended actions.
+Clarifies goals, intents, constraints, boundaries, and limitations from a top-down perspective. Settles each question from model knowledge, the internet, an experiment, or the user, in that order, and labels every inferred requirement with its source.
 
-### consult-user
+#### presentation
 
-Consult user on something.
+Present complex questions or work progress. Use when explaining a decision, plan, or result so the user can act on it.
 
-Presents your concerns, the consequences, and the recommended actions when a decision needs user input.
+Focuses on concerns, consequences, and recommended actions, asks questions with the dedicated question tool when one is available, and communicates through `communicate`.
 
-### troubleshoot
+#### troubleshoot
 
 Troubleshoot a reported issue end to end. Use when a bug or defect is reported and needs reproduction, root cause analysis, an architectural fix, and a documented plan.
 
 Drives troubleshooting with an end-to-end reproducer, lands an architectural fix with updated documents, and records a plan in the `.plans` directory citing the document changes.
 
-### code-review
+### Manually Invoked Skills
 
-Review a change set unattended. Manual invocation only. Use when reviewing a change in a CI pipeline before merge.
+These skills set `disable-model-invocation: true`. They load only when the user or the invoking prompt names them, for example `/code-review`.
+
+#### code-review
+
+Review a change set unattended. Use when reviewing a change in a CI pipeline before merge.
 
 Reports only demonstrated findings, graded as blocking or advisory, checked against the project's recorded decisions and design docs, and written as a JSON report the pipeline can gate on.
 
-### visual-design
+#### communicate
+
+Communicate with the user. Use for any message to the user.
+
+Guides top-down communication in plain language with established terminology, and switches to an illustrated HTML document when text alone would be tedious or ambiguous.
+
+#### communication-consistency
+
+Keep communication consistent across conversations. Use when communicating with the user.
+
+Pairs every identifier with a human-readable short name, reuses the project's existing identifiers, and fixes one named formula per measured quantity for the whole session.
+
+#### experiment
+
+Run a blind experiment. Use when settling a question that only trying can answer.
+
+Produces 2–4 genuinely different candidates against a single criterion, blinds them behind letter labels, has them judged in a fixed verdict template, and leaves the ruling to the user. Uses external producers and judges when the dispatch plugin is installed.
+
+#### visual-design
 
 Create a distinctive visual direction using a random string as private inspiration. Use when designing interfaces, websites, graphics, or other visual artifacts, or refining their color scheme, layout, and typography.
 
@@ -45,13 +71,17 @@ Guides design through shell-generated randomness, interpretation of inspiring pa
 
 ```bash
 # Install the skills globally to Pi
-npx skills add WeZZard/secretary -g -a pi --skill documentation --skill presentation --skill consult-user --skill troubleshoot --skill code-review --skill visual-design
+npx skills add WeZZard/secretary -g -a pi \
+  --skill documentation --skill explore --skill presentation --skill troubleshoot \
+  --skill code-review --skill communicate --skill communication-consistency \
+  --skill experiment --skill visual-design
 
 # Verify with:
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update documentation presentation consult-user troubleshoot code-review visual-design
+npx skills update documentation explore presentation troubleshoot \
+  code-review communicate communication-consistency experiment visual-design
 ```
 
 > Note: `npx skills` installs to Pi via **copy** mode because only one agent is
@@ -67,9 +97,15 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 skills/
 ├── code-review/
 │   └── SKILL.md
-├── consult-user/
+├── communicate/
+│   └── SKILL.md
+├── communication-consistency/
 │   └── SKILL.md
 ├── documentation/
+│   └── SKILL.md
+├── experiment/
+│   └── SKILL.md
+├── explore/
 │   └── SKILL.md
 ├── presentation/
 │   └── SKILL.md
