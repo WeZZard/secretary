@@ -29,6 +29,12 @@ Troubleshoot a reported issue end to end. Use when a bug or defect is reported a
 
 Drives troubleshooting with an end-to-end reproducer, lands an architectural fix with updated documents, and records a plan in the `.plans` directory citing the document changes.
 
+### code-review
+
+Review a change set unattended. Manual invocation only. Use when reviewing a change in a CI pipeline before merge.
+
+Reports only demonstrated findings, graded as blocking or advisory, checked against the project's recorded decisions and design docs, and written as a JSON report the pipeline can gate on.
+
 ### visual-design
 
 Create a distinctive visual direction using a random string as private inspiration. Use when designing interfaces, websites, graphics, or other visual artifacts, or refining their color scheme, layout, and typography.
@@ -39,13 +45,13 @@ Guides design through shell-generated randomness, interpretation of inspiring pa
 
 ```bash
 # Install the skills globally to Pi
-npx skills add WeZZard/secretary -g -a pi --skill documentation --skill presentation --skill consult-user --skill troubleshoot --skill visual-design
+npx skills add WeZZard/secretary -g -a pi --skill documentation --skill presentation --skill consult-user --skill troubleshoot --skill code-review --skill visual-design
 
 # Verify with:
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update documentation presentation consult-user troubleshoot visual-design
+npx skills update documentation presentation consult-user troubleshoot code-review visual-design
 ```
 
 > Note: `npx skills` installs to Pi via **copy** mode because only one agent is
@@ -59,6 +65,8 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 
 ```
 skills/
+├── code-review/
+│   └── SKILL.md
 ├── consult-user/
 │   └── SKILL.md
 ├── documentation/
