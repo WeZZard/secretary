@@ -33,6 +33,10 @@ Explore requirements. Use when starting a design discussion.
 
 Clarifies goals, intents, constraints, boundaries, and limitations from a top-down perspective. Settles each question from model knowledge, the internet, an experiment, or the user, in that order, and labels every inferred requirement with its source.
 
+#### get-audience-on-x
+
+Use before writing anything for an X account, and whenever the author's audience or self-image may have changed: refresh the local plain-text picture of who follows the author and who the author is and speaks for, then hand it to the writing skill, such as bridge-on-x.
+
 #### presentation
 
 Present complex questions or work progress. Use when explaining a decision, plan, or result so the user can act on it.
@@ -84,7 +88,7 @@ Guides design through shell-generated randomness, interpretation of inspiring pa
 ```bash
 # Install the skills globally to Pi
 npx skills add WeZZard/secretary -g -a pi \
-  --skill bridge-on-x --skill documentation --skill education --skill explore --skill presentation --skill troubleshoot \
+  --skill bridge-on-x --skill documentation --skill education --skill explore --skill get-audience-on-x --skill presentation --skill troubleshoot \
   --skill code-review --skill communicate --skill communication-consistency \
   --skill experiment --skill visual-design
 
@@ -92,7 +96,7 @@ npx skills add WeZZard/secretary -g -a pi \
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update bridge-on-x documentation education explore presentation troubleshoot \
+npx skills update bridge-on-x documentation education explore get-audience-on-x presentation troubleshoot \
   code-review communicate communication-consistency experiment visual-design
 ```
 
@@ -122,6 +126,8 @@ skills/
 ├── experiment/
 │   └── SKILL.md
 ├── explore/
+│   └── SKILL.md
+├── get-audience-on-x/
 │   └── SKILL.md
 ├── presentation/
 │   └── SKILL.md
