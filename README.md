@@ -15,6 +15,12 @@ Write documents. Use when producing, editing, or reviewing any document, doc com
 
 Guides document authoring to industry-standard format in simple and plain language, with Mermaid diagrams where they improve comprehension and consistent terminology through `communication-consistency`.
 
+#### education
+
+Produce learning material. Use when teaching the user a topic, paper, system, or result so they can understand and explain it afterwards.
+
+States a learning goal first, defines terms in a glossary, and teaches concepts one at a time with an example, an illustration, and a self-check. Asks questions with the dedicated question tool when one is available, and communicates through `communicate` and `communication-consistency`.
+
 #### explore
 
 Explore requirements. Use when starting a design discussion.
@@ -72,7 +78,7 @@ Guides design through shell-generated randomness, interpretation of inspiring pa
 ```bash
 # Install the skills globally to Pi
 npx skills add WeZZard/secretary -g -a pi \
-  --skill documentation --skill explore --skill presentation --skill troubleshoot \
+  --skill documentation --skill education --skill explore --skill presentation --skill troubleshoot \
   --skill code-review --skill communicate --skill communication-consistency \
   --skill experiment --skill visual-design
 
@@ -80,7 +86,7 @@ npx skills add WeZZard/secretary -g -a pi \
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update documentation explore presentation troubleshoot \
+npx skills update documentation education explore presentation troubleshoot \
   code-review communicate communication-consistency experiment visual-design
 ```
 
@@ -102,6 +108,8 @@ skills/
 ├── communication-consistency/
 │   └── SKILL.md
 ├── documentation/
+│   └── SKILL.md
+├── education/
 │   └── SKILL.md
 ├── experiment/
 │   └── SKILL.md
