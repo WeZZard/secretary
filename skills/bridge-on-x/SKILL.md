@@ -1,9 +1,9 @@
 ---
-name: bridge
-description: "Use when writing a post that brings a subject from one community into another so newcomers read it through and care, for example introducing a developer project to designers or investors. Not for amplifying, reposting or announcing."
+name: bridge-on-x
+description: "Use when writing a post on X that brings a subject from one community into another so newcomers read it through and care, for example introducing a developer project to designers or investors. Not for amplifying, reposting or announcing."
 ---
 
-# Bridge
+# Bridge on X
 
 Use the `/communicate` skill. The goal is to carry one subject across a community boundary: a reader outside the subject's circle reads to the end and feels why it matters to them. This is not publicity, so do not announce, summarize the project's pitch or repeat its slogans.
 
