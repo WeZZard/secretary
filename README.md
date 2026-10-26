@@ -9,6 +9,12 @@ package installable via [npx skills](https://github.com/vercel-labs/skills).
 
 The agent loads these skills on its own when the task matches the description.
 
+#### bridge
+
+Write a post. Use when bringing a subject from one community into another so newcomers read it through and care, for example introducing a developer project to designers or investors. Not for amplifying, reposting or announcing.
+
+Carries a subject from one community into another with a hook, a plain how-it-works and an emotional push.
+
 #### documentation
 
 Write documents. Use when producing, editing, or reviewing any document, doc comment, README, or written deliverable.
@@ -78,7 +84,7 @@ Guides design through shell-generated randomness, interpretation of inspiring pa
 ```bash
 # Install the skills globally to Pi
 npx skills add WeZZard/secretary -g -a pi \
-  --skill documentation --skill education --skill explore --skill presentation --skill troubleshoot \
+  --skill bridge --skill documentation --skill education --skill explore --skill presentation --skill troubleshoot \
   --skill code-review --skill communicate --skill communication-consistency \
   --skill experiment --skill visual-design
 
@@ -86,7 +92,7 @@ npx skills add WeZZard/secretary -g -a pi \
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update documentation education explore presentation troubleshoot \
+npx skills update bridge documentation education explore presentation troubleshoot \
   code-review communicate communication-consistency experiment visual-design
 ```
 
@@ -101,6 +107,8 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 
 ```
 skills/
+├── bridge/
+│   └── SKILL.md
 ├── code-review/
 │   └── SKILL.md
 ├── communicate/
