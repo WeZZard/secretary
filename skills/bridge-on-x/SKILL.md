@@ -7,7 +7,7 @@ description: "Use when writing a post on X that brings a subject from one commun
 
 Use the `/communicate` skill. The goal is to carry one subject across a community boundary: a reader outside the subject's circle reads to the end and feels why it matters to them. This is not publicity, so do not announce, summarize the project's pitch or repeat its slogans.
 
-**Before writing:** use the `/get-audience-on-x` skill and take its audience brief. The audience and the author's identity are fixed by that brief, not chosen by you. If its files are missing or stale, refresh them first. Write for that audience, as that author, in the author's own voice: read the author's recent original posts and match their wording, rhythm and length.
+**Before writing:** use the `/get-mood-on-x` skill and take the audience brief it returns. The audience and the author's identity are fixed by that brief, not chosen by you. If its database is missing, or the last run is more than 30 days old, refresh it first. Write for that audience, as that author, in the author's own voice: read the author's recent original posts and match their wording, rhythm and length.
 
 **Cover, in this order:**
 

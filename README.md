@@ -33,9 +33,11 @@ Explore requirements. Use when starting a design discussion.
 
 Clarifies goals, intents, constraints, boundaries, and limitations from a top-down perspective. Settles each question from model knowledge, the internet, an experiment, or the user, in that order, and labels every inferred requirement with its source.
 
-#### get-audience-on-x
+#### get-mood-on-x
 
-Use before writing anything for an X account, and whenever the author's audience or self-image may have changed: refresh the local plain-text picture of who follows the author and who the author is and speaks for, then hand it to the writing skill, such as bridge-on-x.
+Use before writing anything for an X account, and whenever that read may have changed: get a fresh read on who the author is, whom the author speaks for, and who the audience is right now, then hand a short brief to the writing skill, such as bridge-on-x.
+
+Each run fetches new followers, bios and original posts on X, adds them to a local SQLite file, and reads the whole file before writing an audience brief of at most 120 words.
 
 #### presentation
 
@@ -88,7 +90,7 @@ Guides design through shell-generated randomness, interpretation of inspiring pa
 ```bash
 # Install the skills globally to Pi
 npx skills add WeZZard/secretary -g -a pi \
-  --skill bridge-on-x --skill documentation --skill education --skill explore --skill get-audience-on-x --skill presentation --skill troubleshoot \
+  --skill bridge-on-x --skill documentation --skill education --skill explore --skill get-mood-on-x --skill presentation --skill troubleshoot \
   --skill code-review --skill communicate --skill communication-consistency \
   --skill experiment --skill visual-design
 
@@ -96,7 +98,7 @@ npx skills add WeZZard/secretary -g -a pi \
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update bridge-on-x documentation education explore get-audience-on-x presentation troubleshoot \
+npx skills update bridge-on-x documentation education explore get-mood-on-x presentation troubleshoot \
   code-review communicate communication-consistency experiment visual-design
 ```
 
@@ -127,7 +129,7 @@ skills/
 │   └── SKILL.md
 ├── explore/
 │   └── SKILL.md
-├── get-audience-on-x/
+├── get-mood-on-x/
 │   └── SKILL.md
 ├── presentation/
 │   └── SKILL.md
