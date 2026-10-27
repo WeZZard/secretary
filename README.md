@@ -23,15 +23,9 @@ Carries a subject from one community into another with a hook, a plain how-it-wo
 
 #### documentation
 
-Write documents. Use when producing, editing, or reviewing any document, doc comment, README, or written deliverable.
+Write documents. Use when documenting.
 
-Guides document authoring to industry-standard format in simple and plain language, with Mermaid diagrams where they improve comprehension and consistent terminology through `communication-consistency`.
-
-#### education
-
-Produce learning material. Use when teaching the user a topic, paper, system, or result so they can understand and explain it afterwards.
-
-States a learning goal first, defines terms in a glossary, and teaches concepts one at a time with an example, an illustration, and a self-check. Asks questions with the dedicated question tool when one is available, and communicates through `communicate` and `communication-consistency`.
+Guides document authoring through `communicate` and its communication consistency rules, with established terminology and Mermaid diagrams where they improve comprehension.
 
 #### explore
 
@@ -49,7 +43,7 @@ Each run fetches new followers, bios and original posts on X, adds them to a loc
 
 Present complex questions or work progress. Use when explaining a decision, plan, or result so the user can act on it.
 
-Focuses on concerns, consequences, and recommended actions, asks questions with the dedicated question tool when one is available, and communicates through `communicate`.
+Focuses on concerns, consequences, and recommended actions, asks questions with the dedicated question tool when one is available, switches to an illustrated HTML document when text alone would be tedious or ambiguous, and communicates through `communicate`.
 
 #### troubleshoot
 
@@ -71,13 +65,9 @@ Reports only demonstrated findings, graded as blocking or advisory, checked agai
 
 Communicate with the user. Use for any message to the user.
 
-Guides top-down communication in plain language with established terminology, and switches to an illustrated HTML document when text alone would be tedious or ambiguous.
+Guides top-down communication in plain language with established terminology.
 
-#### communication-consistency
-
-Keep communication consistent across conversations. Use when communicating with the user.
-
-Pairs every identifier with a human-readable short name, reuses the project's existing identifiers, and fixes one named formula per measured quantity for the whole session.
+Keeps communication consistent across conversations through `references/communication-consistency.md`: shows a visual glossary when the user may not recognize the parts of an artifact by name, pairs every identifier with a human-readable short name, reuses the project's existing identifiers, and fixes one named formula per measured quantity for the whole session.
 
 #### experiment
 
@@ -90,16 +80,15 @@ Produces 2–4 genuinely different candidates against a single criterion, blinds
 ```bash
 # Install the skills globally to Pi
 npx skills add WeZZard/secretary -g -a pi \
-  --skill be-creative --skill bridge-on-x --skill documentation --skill education --skill explore --skill get-mood-on-x --skill presentation --skill troubleshoot \
-  --skill code-review --skill communicate --skill communication-consistency \
-  --skill experiment
+  --skill be-creative --skill bridge-on-x --skill documentation --skill explore --skill get-mood-on-x --skill presentation --skill troubleshoot \
+  --skill code-review --skill communicate --skill experiment
 
 # Verify with:
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update be-creative bridge-on-x documentation education explore get-mood-on-x presentation troubleshoot \
-  code-review communicate communication-consistency experiment
+npx skills update be-creative bridge-on-x documentation explore get-mood-on-x presentation troubleshoot \
+  code-review communicate experiment
 ```
 
 > Note: `npx skills` installs to Pi via **copy** mode because only one agent is
@@ -120,12 +109,10 @@ skills/
 ├── code-review/
 │   └── SKILL.md
 ├── communicate/
-│   └── SKILL.md
-├── communication-consistency/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── references/
+│       └── communication-consistency.md
 ├── documentation/
-│   └── SKILL.md
-├── education/
 │   └── SKILL.md
 ├── experiment/
 │   └── SKILL.md

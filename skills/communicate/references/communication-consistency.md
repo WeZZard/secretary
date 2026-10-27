@@ -1,8 +1,13 @@
----
-name: communication-consistency
-description: "Use when communicate with user."
-disable-model-invocation: true
----
+# Communication Consistency
+
+## Using a Visual Glossary
+
+**Use when:** the presentation names parts of a visual artifact that the user may not recognize, such as components, screens, or regions of an app.
+
+1. You **MUST** include a visual glossary. A visual glossary is an annotated screenshot of the artifact that highlights and labels each part the presentation names.
+2. You **MUST** label each highlighted part with the same `short name (ID-1)` that the text uses, as defined in Using Stable Identifiers.
+3. You **MUST** take the screenshot from the running artifact rather than drawing it from memory.
+4. You **MUST** highlight only the parts that the presentation names.
 
 ## Using Stable Identifiers
 
