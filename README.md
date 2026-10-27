@@ -11,9 +11,9 @@ The agent loads these skills on its own when the task matches the description.
 
 #### be-creative
 
-Create a distinctive design direction using a random string as private inspiration. Use when designing visual or audio artifacts, such as interfaces, websites, graphics, sound effects, and music, or when refining their style and elements.
+Create a distinctive design direction using a random string as private inspiration. Use when designing visual or audio artifacts, such as interfaces, websites, graphics, videos, sound effects, and music, or when refining their style and elements.
 
-Guides design through shell-generated randomness, interpretation of inspiring patterns, and polished execution without revealing the string in the result.
+Guides design through shell-generated randomness, interpretation of inspiring patterns, and polished execution without revealing the string in the result. Loads one reference per design dimension that the artifact has: visual, time, sound, and behavior, plus an audiovisual reference that joins visuals and sound.
 
 #### bridge-on-x
 
@@ -103,7 +103,13 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 ```
 skills/
 ├── be-creative/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── references/
+│       ├── audiovisual.md
+│       ├── behavior.md
+│       ├── sound.md
+│       ├── time.md
+│       └── visual.md
 ├── bridge-on-x/
 │   └── SKILL.md
 ├── code-review/
