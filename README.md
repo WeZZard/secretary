@@ -9,6 +9,12 @@ package installable via [npx skills](https://github.com/vercel-labs/skills).
 
 The agent loads these skills on its own when the task matches the description.
 
+#### be-creative
+
+Create a distinctive design direction using a random string as private inspiration. Use when designing visual or audio artifacts, such as interfaces, websites, graphics, sound effects, and music, or when refining their style and elements.
+
+Guides design through shell-generated randomness, interpretation of inspiring patterns, and polished execution without revealing the string in the result.
+
 #### bridge-on-x
 
 Write a post. Use when bringing a subject from one community into another so newcomers read it through and care, for example introducing a developer project to designers or investors. Not for amplifying, reposting or announcing.
@@ -79,27 +85,21 @@ Run a blind experiment. Use when settling a question that only trying can answer
 
 Produces 2–4 genuinely different candidates against a single criterion, blinds them behind letter labels, has them judged in a fixed verdict template, and leaves the ruling to the user. Uses external producers and judges when the dispatch plugin is installed.
 
-#### visual-design
-
-Create a distinctive visual direction using a random string as private inspiration. Use when designing interfaces, websites, graphics, or other visual artifacts, or refining their color scheme, layout, and typography.
-
-Guides design through shell-generated randomness, interpretation of inspiring patterns, and polished execution without revealing the string in the result.
-
 ## Installation
 
 ```bash
 # Install the skills globally to Pi
 npx skills add WeZZard/secretary -g -a pi \
-  --skill bridge-on-x --skill documentation --skill education --skill explore --skill get-mood-on-x --skill presentation --skill troubleshoot \
+  --skill be-creative --skill bridge-on-x --skill documentation --skill education --skill explore --skill get-mood-on-x --skill presentation --skill troubleshoot \
   --skill code-review --skill communicate --skill communication-consistency \
-  --skill experiment --skill visual-design
+  --skill experiment
 
 # Verify with:
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update bridge-on-x documentation education explore get-mood-on-x presentation troubleshoot \
-  code-review communicate communication-consistency experiment visual-design
+npx skills update be-creative bridge-on-x documentation education explore get-mood-on-x presentation troubleshoot \
+  code-review communicate communication-consistency experiment
 ```
 
 > Note: `npx skills` installs to Pi via **copy** mode because only one agent is
@@ -113,6 +113,8 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 
 ```
 skills/
+├── be-creative/
+│   └── SKILL.md
 ├── bridge-on-x/
 │   └── SKILL.md
 ├── code-review/
@@ -133,9 +135,7 @@ skills/
 │   └── SKILL.md
 ├── presentation/
 │   └── SKILL.md
-├── troubleshoot/
-│   └── SKILL.md
-└── visual-design/
+└── troubleshoot/
     └── SKILL.md
 ```
 
