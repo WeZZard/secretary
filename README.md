@@ -45,6 +45,12 @@ Present complex questions or work progress. Use when explaining a decision, plan
 
 Focuses on concerns, consequences, and recommended actions, asks questions with the dedicated question tool when one is available, switches to an illustrated HTML document when text alone would be tedious or ambiguous, and communicates through `communicate`.
 
+#### repo-risk-audit
+
+Audit an open-source project for risk. Use when deciding whether a GitHub project is safe to install, run, or give credentials to.
+
+Launches separate subagents for provenance, issue verification, code audit, and supply chain audit on one pinned commit. Treats issue text and project claims as claims to verify, runs security tools such as Semgrep, Gitleaks, OSV-Scanner, and OpenSSF Scorecard, and delivers one verdict. Written with the key words of RFC 2119.
+
 #### troubleshoot
 
 Troubleshoot a reported issue end to end. Use when a bug or defect is reported and needs reproduction, root cause analysis, an architectural fix, and a documented plan.
@@ -80,14 +86,14 @@ Produces 2–4 genuinely different candidates against a single criterion, blinds
 ```bash
 # Install the skills globally to Pi
 npx skills add WeZZard/secretary -g -a pi \
-  --skill be-creative --skill bridge-on-x --skill documentation --skill explore --skill get-mood-on-x --skill presentation --skill troubleshoot \
+  --skill be-creative --skill bridge-on-x --skill documentation --skill explore --skill get-mood-on-x --skill presentation --skill repo-risk-audit --skill troubleshoot \
   --skill code-review --skill communicate --skill experiment
 
 # Verify with:
 npx skills list -g
 
 # Update after a change in this repo:
-npx skills update be-creative bridge-on-x documentation explore get-mood-on-x presentation troubleshoot \
+npx skills update be-creative bridge-on-x documentation explore get-mood-on-x presentation repo-risk-audit troubleshoot \
   code-review communicate experiment
 ```
 
@@ -127,6 +133,8 @@ skills/
 ├── get-mood-on-x/
 │   └── SKILL.md
 ├── presentation/
+│   └── SKILL.md
+├── repo-risk-audit/
 │   └── SKILL.md
 └── troubleshoot/
     └── SKILL.md
