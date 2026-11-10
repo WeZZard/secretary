@@ -1,7 +1,6 @@
 ---
 name: communicate
 description: "Use when communicate with the user for anything."
-disable-model-invocation: true
 ---
 
 # Communicate
