@@ -73,7 +73,7 @@ Communicate with the user. Use for any message to the user.
 
 Guides top-down communication in plain language with established terminology.
 
-Keeps communication consistent across conversations through `references/communication-consistency.md`: shows a visual glossary when the user may not recognize the parts of an artifact by name, pairs every identifier with a human-readable short name, reuses the project's existing identifiers, and fixes one named formula per measured quantity for the whole session.
+Keeps communication consistent across conversations through `references/communication-consistency.md`: shows a visual glossary when the user may not recognize the parts of an artifact by name, cites resources that carry project-defined identifiers by a stable human-readable description plus a reference to the identifier rather than by the identifier alone, and fixes one named formula per measured quantity for the whole session.
 
 #### experiment
 
